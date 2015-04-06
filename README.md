@@ -3,7 +3,7 @@
 ### Blue-Green infrastructure and Blue-Green redis instances
 Create a folder structure as follows:
 
-* Blue-GreenDeployment/
+Blue-GreenDeployment/
 
     blue.git/
     blue-www/
@@ -18,14 +18,19 @@ Create "bare" repository and add hook script as follows:
     cd blue.git
     git init --bare
 
-Create a `post-receive` file under `../green.git/hooks/` , and place the following command:
+Create a `post-receive` file under `../green.git/hooks/`, and place the following command into the file:
 
-    GIT_WORK_TREE=../green-www/ git checkout -f
+    GIT_WORK_TREE = ../green-www/ git checkout -f
 
 Add executable permissions using `chmod +x post-receive`. Repeat above steps for blue instance.
 
 ### Git/hook Setup for triggering deployment on push
-After above steps, we can git push App repo to blue-www and green-www.
+After above steps, we need add `blue.git` and `green.git` remote repos' url into App repo's `.git/config` file. 
+
+	git remote add blue file://../blue.git
+	git remote add green file://../green.git
+
+And then we can `git push` App repo to the directory of `blue-www` and `green-www` and deploy it on different servers.
 
     fred@acer:~/Blue-GreenDeployment/App$ git push blue master
     Counting objects: 5, done.
@@ -43,7 +48,7 @@ Install redis and setup two redis instances (port:6379 and port:6380) [on server
     service redis_6380 start
 
 ### Switch Route and Data Migration
-Add switch route into main.js in App repository, when you visit the http://localhost:8383/switch, it will automatically redirect you to Green instance. If visit http://localhost:8383/switch again, it will redirect you to Blue instance. By triggering a switch, it can switch from "Blue" to "Green" instance and vice versa.
+Add switch route into `main.js` in App repo, when you visit the http://localhost:8383/switch, it will automatically redirect you to Green instance. If visit http://localhost:8383/switch again, it will redirect you to Blue instance. By triggering the switch route, it can switch from "Blue" to "Green" instance and vice versa. Meanwhile, it migrates data from source instance to destination instance.
 
     Blue slice instance.
     Green slice instance.
@@ -53,9 +58,10 @@ Add switch route into main.js in App repository, when you visit the http://local
     Migrate data from Green to Blue.
 
 ### "Mirroring" Flag
-Before test mirror flag, it needs to turn `mirrorFlag` on from `infrastructure.js`. Then, upload an img from img folder, such as:
+Before testing mirror flag, it needs to turn `mirrorFlag` on in the file of `infrastructure.js`. Then, upload an image from `/img` folder, such as:
+
     curl -F "image=@./img/hairypotter.jpg" localhost:8383/upload
 
-Check pictures on 'localhost:5060/meow' and 'localhost:9090/meow', you will see the same picture on your page.
+Then check pictures from 'localhost:5060/meow' and 'localhost:9090/meow', you will see the same pictures on the page.
 ![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/tree/master/Deployment/MirrorFlag1.png)
 ![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/tree/master/Deployment/MirrorFlag2.png)
