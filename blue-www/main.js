@@ -9,18 +9,15 @@ var PORT = args[0];
 
 app.get('/', function(req, res) 
 {
-	res.send("Hello Blue2.");
+    res.send("Hello, I am BLUE.");
 });
 
 app.get('/switch', function(req, res)
 {
-//	res.status(500).send('Something has broken!');
-	res.redirect('http://localhost:5060');
-//	console.log("switch to blue.");
-    
-	//res.redirect('/');
-	client.set("switch","1");
-	
+//	res.status(500).send('Something has broken! GREEN');
+//	res.redirect('http://localhost:9090');
+    res.redirect('/');
+    client.set("switch","1");
 });
 
 app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){
@@ -50,7 +47,7 @@ app.get('/meow', function(req, res) {
 	}
 })
 
-var server = app.listen(3000, function () {
+var server = app.listen(PORT, function () {
 
 	var host = server.address().address
 	var port = server.address().port

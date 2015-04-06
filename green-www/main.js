@@ -9,15 +9,15 @@ var PORT = args[0];
 
 app.get('/', function(req, res) 
 {
-	res.send("Hello World, I am GREEN.");
+	res.send("Hello, I am GREEN.");
 });
 
 app.get('/switch', function(req, res)
 {
 //	res.status(500).send('Something has broken! GREEN');
-	res.redirect('http://localhost:9090');
-//res.redirect('/');
-client.set("switch","1");
+//	res.redirect('http://localhost:9090');
+    res.redirect('/');
+    client.set("switch","1");
 });
 
 app.post('/upload',[ multer({ dest: './uploads/'}), function(req, res){

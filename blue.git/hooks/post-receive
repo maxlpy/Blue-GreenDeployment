@@ -1,2 +1,2 @@
 #!/bin/bash
-GIT_WORK_TREE=/home/fred/Dropbox/Courses/CSC591/deploy/blue-www/ git checkout -f
+GIT_WORK_TREE=/home/fred/Dropbox/Courses/CSC591/Blue-GreenDeployment/blue-www/ git checkout -f
