@@ -1,0 +1,338 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 warn package.json deflight@1.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/fred/Dropbox/Courses/CSC591/deploy/Deployment',
+7 verbose install   [ 'http-proxy', 'request' ] ]
+8 info preinstall deflight@1.0.0
+9 verbose readDependencies using package.json deps
+10 verbose cache add [ 'http-proxy@^1.9.0', null ]
+11 verbose cache add name=undefined spec="http-proxy@^1.9.0" args=["http-proxy@^1.9.0",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'http-proxy@^1.9.0',
+12 verbose parsed url   path: 'http-proxy@^1.9.0',
+12 verbose parsed url   href: 'http-proxy@^1.9.0' }
+13 verbose cache add [ 'request@^2.54.0', null ]
+14 verbose cache add name=undefined spec="request@^2.54.0" args=["request@^2.54.0",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'request@^2.54.0',
+15 verbose parsed url   path: 'request@^2.54.0',
+15 verbose parsed url   href: 'request@^2.54.0' }
+16 verbose cache add name="http-proxy" spec="^1.9.0" args=["http-proxy","^1.9.0"]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: '^1.9.0',
+17 verbose parsed url   path: '^1.9.0',
+17 verbose parsed url   href: '^1.9.0' }
+18 verbose addNamed [ 'http-proxy', '^1.9.0' ]
+19 verbose addNamed [ null, '>=1.9.0-0 <2.0.0-0' ]
+20 verbose cache add name="request" spec="^2.54.0" args=["request","^2.54.0"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: '^2.54.0',
+21 verbose parsed url   path: '^2.54.0',
+21 verbose parsed url   href: '^2.54.0' }
+22 verbose addNamed [ 'request', '^2.54.0' ]
+23 verbose addNamed [ null, '>=2.54.0-0 <3.0.0-0' ]
+24 silly lockFile 92276bcd-http-proxy-1-9-0 http-proxy@^1.9.0
+25 verbose lock http-proxy@^1.9.0 /home/fred/.npm/92276bcd-http-proxy-1-9-0.lock
+26 silly lockFile d4c1f396-request-2-54-0 request@^2.54.0
+27 verbose lock request@^2.54.0 /home/fred/.npm/d4c1f396-request-2-54-0.lock
+28 silly addNameRange { name: 'http-proxy',
+28 silly addNameRange   range: '>=1.9.0-0 <2.0.0-0',
+28 silly addNameRange   hasData: false }
+29 silly addNameRange { name: 'request', range: '>=2.54.0-0 <3.0.0-0', hasData: false }
+30 verbose request where is /http-proxy
+31 verbose request registry https://registry.npmjs.org/
+32 verbose request id 1a9eacff17960e6b
+33 verbose url raw /http-proxy
+34 verbose url resolving [ 'https://registry.npmjs.org/', './http-proxy' ]
+35 verbose url resolved https://registry.npmjs.org/http-proxy
+36 verbose request where is https://registry.npmjs.org/http-proxy
+37 info trying registry request attempt 1 at 08:06:20
+38 verbose etag "9DT73GU683NFM4HS7327FO9XI"
+39 http GET https://registry.npmjs.org/http-proxy
+40 verbose request where is /request
+41 verbose request registry https://registry.npmjs.org/
+42 verbose url raw /request
+43 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+44 verbose url resolved https://registry.npmjs.org/request
+45 verbose request where is https://registry.npmjs.org/request
+46 info trying registry request attempt 1 at 08:06:20
+47 verbose etag "3LXQXCC5ZDFVX9S4UNH2X1B4T"
+48 http GET https://registry.npmjs.org/request
+49 http 200 https://registry.npmjs.org/request
+50 silly registry.get cb [ 200,
+50 silly registry.get   { date: 'Sun, 05 Apr 2015 12:06:21 GMT',
+50 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+50 silly registry.get     etag: '"DMXNSQL4BODZW4HZ8B26LZQ4R"',
+50 silly registry.get     'content-type': 'application/json',
+50 silly registry.get     'cache-control': 'max-age=60',
+50 silly registry.get     'content-length': '145518',
+50 silly registry.get     'accept-ranges': 'bytes',
+50 silly registry.get     via: '1.1 varnish',
+50 silly registry.get     age: '32',
+50 silly registry.get     'x-served-by': 'cache-iad2136-IAD',
+50 silly registry.get     'x-cache': 'HIT',
+50 silly registry.get     'x-cache-hits': '2',
+50 silly registry.get     'x-timer': 'S1428235581.124730,VS0,VE0',
+50 silly registry.get     vary: 'Accept',
+50 silly registry.get     'keep-alive': 'timeout=10, max=50',
+50 silly registry.get     connection: 'Keep-Alive' } ]
+51 http 200 https://registry.npmjs.org/http-proxy
+52 silly registry.get cb [ 200,
+52 silly registry.get   { date: 'Sun, 05 Apr 2015 12:06:21 GMT',
+52 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+52 silly registry.get     etag: '"CFKIM7D5FVXLIZJGLLHOB9UBF"',
+52 silly registry.get     'content-type': 'application/json',
+52 silly registry.get     'cache-control': 'max-age=60',
+52 silly registry.get     'content-length': '111609',
+52 silly registry.get     'accept-ranges': 'bytes',
+52 silly registry.get     via: '1.1 varnish',
+52 silly registry.get     age: '36',
+52 silly registry.get     'x-served-by': 'cache-iad2141-IAD',
+52 silly registry.get     'x-cache': 'HIT',
+52 silly registry.get     'x-cache-hits': '1',
+52 silly registry.get     'x-timer': 'S1428235581.136477,VS0,VE0',
+52 silly registry.get     vary: 'Accept',
+52 silly registry.get     'keep-alive': 'timeout=10, max=50',
+52 silly registry.get     connection: 'Keep-Alive' } ]
+53 silly addNameRange number 2 { name: 'request', range: '>=2.54.0-0 <3.0.0-0', hasData: true }
+54 silly addNameRange versions [ 'request',
+54 silly addNameRange   [ '0.10.0',
+54 silly addNameRange     '0.8.3',
+54 silly addNameRange     '0.9.0',
+54 silly addNameRange     '0.9.1',
+54 silly addNameRange     '0.9.5',
+54 silly addNameRange     '1.0.0',
+54 silly addNameRange     '1.1.0',
+54 silly addNameRange     '1.1.1',
+54 silly addNameRange     '1.2.0',
+54 silly addNameRange     '1.9.0',
+54 silly addNameRange     '1.9.1',
+54 silly addNameRange     '1.9.2',
+54 silly addNameRange     '1.9.3',
+54 silly addNameRange     '1.9.5',
+54 silly addNameRange     '1.9.7',
+54 silly addNameRange     '1.9.8',
+54 silly addNameRange     '1.9.9',
+54 silly addNameRange     '2.0.0',
+54 silly addNameRange     '2.0.1',
+54 silly addNameRange     '2.0.2',
+54 silly addNameRange     '2.0.3',
+54 silly addNameRange     '2.0.4',
+54 silly addNameRange     '2.0.5',
+54 silly addNameRange     '2.1.0',
+54 silly addNameRange     '2.1.1',
+54 silly addNameRange     '2.2.0',
+54 silly addNameRange     '2.2.5',
+54 silly addNameRange     '2.2.6',
+54 silly addNameRange     '2.2.9',
+54 silly addNameRange     '2.9.0',
+54 silly addNameRange     '2.9.1',
+54 silly addNameRange     '2.9.2',
+54 silly addNameRange     '2.9.3',
+54 silly addNameRange     '2.9.100',
+54 silly addNameRange     '2.9.150',
+54 silly addNameRange     '2.9.151',
+54 silly addNameRange     '2.9.152',
+54 silly addNameRange     '2.9.153',
+54 silly addNameRange     '2.9.200',
+54 silly addNameRange     '2.9.201',
+54 silly addNameRange     '2.9.202',
+54 silly addNameRange     '2.9.203',
+54 silly addNameRange     '2.10.0',
+54 silly addNameRange     '2.11.0',
+54 silly addNameRange     '2.11.1',
+54 silly addNameRange     '2.11.2',
+54 silly addNameRange     '2.11.3',
+54 silly addNameRange     '2.11.4',
+54 silly addNameRange     '2.12.0',
+54 silly addNameRange     '2.14.0',
+54 silly addNameRange     '2.16.0',
+54 silly addNameRange     '2.16.2',
+54 silly addNameRange     '2.16.4',
+54 silly addNameRange     '2.16.6',
+54 silly addNameRange     '2.18.0',
+54 silly addNameRange     '2.19.0',
+54 silly addNameRange     '2.20.0',
+54 silly addNameRange     '2.21.0',
+54 silly addNameRange     '2.22.0',
+54 silly addNameRange     '2.23.0',
+54 silly addNameRange     '2.24.0',
+54 silly addNameRange     '2.25.0',
+54 silly addNameRange     '2.26.0',
+54 silly addNameRange     '2.27.0',
+54 silly addNameRange     '2.28.0',
+54 silly addNameRange     '2.29.0',
+54 silly addNameRange     '2.30.0',
+54 silly addNameRange     '2.31.0',
+54 silly addNameRange     '2.32.0',
+54 silly addNameRange     '2.33.0',
+54 silly addNameRange     '2.34.0',
+54 silly addNameRange     '2.35.0',
+54 silly addNameRange     '2.36.0',
+54 silly addNameRange     '2.37.0',
+54 silly addNameRange     '2.38.0',
+54 silly addNameRange     '2.39.0',
+54 silly addNameRange     '2.40.0',
+54 silly addNameRange     '2.41.0',
+54 silly addNameRange     '2.42.0',
+54 silly addNameRange     '2.43.0',
+54 silly addNameRange     '2.44.0',
+54 silly addNameRange     '2.45.0',
+54 silly addNameRange     '2.46.0',
+54 silly addNameRange     '2.47.0',
+54 silly addNameRange     '2.48.0',
+54 silly addNameRange     '2.49.0',
+54 silly addNameRange     '2.50.0',
+54 silly addNameRange     '2.51.0',
+54 silly addNameRange     '2.52.0',
+54 silly addNameRange     '2.53.0',
+54 silly addNameRange     '2.54.0',
+54 silly addNameRange     '2.55.0' ] ]
+55 verbose addNamed [ 'request', '2.55.0' ]
+56 verbose addNamed [ '2.55.0', '2.55.0' ]
+57 silly lockFile d17afc53-request-2-55-0 request@2.55.0
+58 verbose lock request@2.55.0 /home/fred/.npm/d17afc53-request-2-55-0.lock
+59 silly addNameRange number 2 { name: 'http-proxy',
+59 silly addNameRange   range: '>=1.9.0-0 <2.0.0-0',
+59 silly addNameRange   hasData: true }
+60 silly addNameRange versions [ 'http-proxy',
+60 silly addNameRange   [ '0.5.9',
+60 silly addNameRange     '0.5.10',
+60 silly addNameRange     '0.5.11',
+60 silly addNameRange     '0.6.0',
+60 silly addNameRange     '0.6.1',
+60 silly addNameRange     '0.6.2',
+60 silly addNameRange     '0.6.4',
+60 silly addNameRange     '0.6.5',
+60 silly addNameRange     '0.6.6',
+60 silly addNameRange     '0.7.0',
+60 silly addNameRange     '0.7.2',
+60 silly addNameRange     '0.7.3',
+60 silly addNameRange     '0.7.4',
+60 silly addNameRange     '0.7.5',
+60 silly addNameRange     '0.7.6',
+60 silly addNameRange     '0.8.0',
+60 silly addNameRange     '0.8.1',
+60 silly addNameRange     '0.8.2',
+60 silly addNameRange     '0.8.3',
+60 silly addNameRange     '0.8.4',
+60 silly addNameRange     '0.8.5',
+60 silly addNameRange     '0.8.6',
+60 silly addNameRange     '0.8.7',
+60 silly addNameRange     '0.9.0',
+60 silly addNameRange     '0.9.1',
+60 silly addNameRange     '0.10.0',
+60 silly addNameRange     '0.10.1',
+60 silly addNameRange     '0.10.2',
+60 silly addNameRange     '0.10.3',
+60 silly addNameRange     '0.10.4',
+60 silly addNameRange     '1.0.0',
+60 silly addNameRange     '1.0.1',
+60 silly addNameRange     '1.0.2',
+60 silly addNameRange     '1.0.3',
+60 silly addNameRange     '1.1.0',
+60 silly addNameRange     '1.1.1',
+60 silly addNameRange     '1.1.2',
+60 silly addNameRange     '1.1.3',
+60 silly addNameRange     '1.1.4',
+60 silly addNameRange     '1.1.5',
+60 silly addNameRange     '1.1.6',
+60 silly addNameRange     '1.2.0',
+60 silly addNameRange     '1.2.1',
+60 silly addNameRange     '1.3.0',
+60 silly addNameRange     '1.4.0',
+60 silly addNameRange     '1.4.1',
+60 silly addNameRange     '1.4.2',
+60 silly addNameRange     '1.4.3',
+60 silly addNameRange     '1.5.0',
+60 silly addNameRange     '1.5.1',
+60 silly addNameRange     '1.5.2',
+60 silly addNameRange     '1.5.3',
+60 silly addNameRange     '1.6.0',
+60 silly addNameRange     '1.6.1',
+60 silly addNameRange     '1.6.2',
+60 silly addNameRange     '1.7.0',
+60 silly addNameRange     '1.7.1',
+60 silly addNameRange     '1.7.2',
+60 silly addNameRange     '1.7.3',
+60 silly addNameRange     '1.8.0',
+60 silly addNameRange     '1.8.1',
+60 silly addNameRange     '1.9.0',
+60 silly addNameRange     '1.9.1',
+60 silly addNameRange     '1.10.0',
+60 silly addNameRange     '1.10.1' ] ]
+61 verbose addNamed [ 'http-proxy', '1.10.1' ]
+62 verbose addNamed [ '1.10.1', '1.10.1' ]
+63 silly lockFile f5fcc9a8-http-proxy-1-10-1 http-proxy@1.10.1
+64 verbose lock http-proxy@1.10.1 /home/fred/.npm/f5fcc9a8-http-proxy-1-10-1.lock
+65 silly lockFile 28cfb46b-s-org-request-request-2-55-0-tgz https://registry.npmjs.org/request/-/request-2.55.0.tgz
+66 verbose lock https://registry.npmjs.org/request/-/request-2.55.0.tgz /home/fred/.npm/28cfb46b-s-org-request-request-2-55-0-tgz.lock
+67 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.55.0.tgz',
+67 verbose addRemoteTarball   'd75c1cdf679d76bb100f9bffe1fe551b5c24e93d' ]
+68 info retry fetch attempt 1 at 08:06:21
+69 verbose fetch to= /tmp/npm-5356-mHaXKi_R/registry.npmjs.org/request/-/request-2.55.0.tgz
+70 http GET https://registry.npmjs.org/request/-/request-2.55.0.tgz
+71 silly lockFile f5fcc9a8-http-proxy-1-10-1 http-proxy@1.10.1
+72 silly lockFile f5fcc9a8-http-proxy-1-10-1 http-proxy@1.10.1
+73 silly lockFile 92276bcd-http-proxy-1-9-0 http-proxy@^1.9.0
+74 silly lockFile 92276bcd-http-proxy-1-9-0 http-proxy@^1.9.0
+75 http 200 https://registry.npmjs.org/request/-/request-2.55.0.tgz
+76 silly lockFile 28cfb46b-s-org-request-request-2-55-0-tgz https://registry.npmjs.org/request/-/request-2.55.0.tgz
+77 silly lockFile 28cfb46b-s-org-request-request-2-55-0-tgz https://registry.npmjs.org/request/-/request-2.55.0.tgz
+78 silly lockFile d17afc53-request-2-55-0 request@2.55.0
+79 silly lockFile d17afc53-request-2-55-0 request@2.55.0
+80 silly lockFile d4c1f396-request-2-54-0 request@^2.54.0
+81 silly lockFile d4c1f396-request-2-54-0 request@^2.54.0
+82 error Error: EACCES, mkdir '/home/fred/.npm/request/2.55.0'
+82 error  { [Error: EACCES, mkdir '/home/fred/.npm/request/2.55.0']
+82 error   errno: 3,
+82 error   code: 'EACCES',
+82 error   path: '/home/fred/.npm/request/2.55.0',
+82 error   parent: 'deflight' }
+83 error Please try running this command again as root/Administrator.
+84 error System Linux 3.13.0-48-generic
+85 error command "/usr/bin/node" "/usr/bin/npm" "install"
+86 error cwd /home/fred/Dropbox/Courses/CSC591/deploy/Deployment
+87 error node -v v0.10.37
+88 error npm -v 1.4.28
+89 error path /home/fred/.npm/request/2.55.0
+90 error code EACCES
+91 error errno 3
+92 error stack Error: EACCES, mkdir '/home/fred/.npm/request/2.55.0'
+93 verbose exit [ 3, true ]
