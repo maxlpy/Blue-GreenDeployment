@@ -37,13 +37,13 @@ After above steps, we can git push App repo to blue-www and green-www.
     a047abc..4281bfc  master -> master
 
 Setup two redis instances on server
-Install redis and setup two redis instances (port:6379 and port:6380) on [server.] (http://devopsmb.blogspot.com/2014/02/add-multiple-redis-instances-on-server.html)
+Install redis and setup two redis instances (port:6379 and port:6380) [on server.] (http://devopsmb.blogspot.com/2014/02/add-multiple-redis-instances-on-server.html)
 
     service redis_6379 start
     service redis_6380 start
 
 ### Switch Route and Data Migration
-Add switch route into main.js in App repository, when you visit the http://localhost:8282/switch, it will automatically redirect you to Green instance. If visit http://localhost:8282/switch again, it will redirect you to Blue instance. By triggering a switch, it can switch from "Blue" to "Green" instance and vice versa.
+Add switch route into main.js in App repository, when you visit the http://localhost:8383/switch, it will automatically redirect you to Green instance. If visit http://localhost:8383/switch again, it will redirect you to Blue instance. By triggering a switch, it can switch from "Blue" to "Green" instance and vice versa.
 
     Blue slice instance.
     Green slice instance.
@@ -57,3 +57,5 @@ Before test mirror flag, it needs to turn `mirrorFlag` on from `infrastructure.j
     curl -F "image=@./img/hairypotter.jpg" localhost:8383/upload
 
 Check pictures on 'localhost:5060/meow' and 'localhost:9090/meow', you will see the same picture on your page.
+![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/tree/master/Deployment/MirrorFlag1.png)
+![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/tree/master/Deployment/MirrorFlag2.png)
