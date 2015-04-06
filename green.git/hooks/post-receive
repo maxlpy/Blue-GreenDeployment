@@ -1,0 +1,3 @@
+#!/bin/bash
+GIT_WORK_TREE=/home/fred/Dropbox/Courses/CSC591/deploy/green-www/ git checkout -f
+npm install
