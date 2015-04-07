@@ -63,5 +63,7 @@ Before testing mirror flag, it needs to turn `mirrorFlag` on in the file of `inf
     curl -F "image=@./img/hairypotter.jpg" localhost:8383/upload
 
 Then check pictures from 'localhost:5060/meow' and 'localhost:9090/meow', you will see the same pictures on the page.
+
 ![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/blob/master/Pictures/MirrorFlag1.png)
+
 ![alt tag](https://github.com/maxlpy/Blue-GreenDeployment/blob/master/Pictures/MirrorFlag2.png)  
